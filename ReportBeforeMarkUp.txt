@@ -1,0 +1,89 @@
+Title	Description	Related Items
+Optionally Display Credit Card Type in Reports	The EMV Direct and Simplify credit card processing solutions populate a new Card Type field for the tender when processing a transaction rather than changing the Tender Code. Each of the reports listed below now has the option of showing the card type information, since the Tender Code is no longer sufficient to identify the card type in these reports, for those clients using these processing solutions. The default behavior is to omit the card type information.
+
+Updated reports: Credit Card Reconciliation, Payment Card Detail, Payment Card Totals, Tender Totals Top Level and Tender Totals Summary
+	59488
+Cannot void transaction with tender of type Credit Card authorized by host system and imported or posted via API	Resolved an issue where iNovah would not void tenders with the Tender Type of Credit Card when the tenders were authorized by a third party and then either imported or posted via the iNovah API.  iNovah will now attempt to void these tenders, if an appropriate integration is in place, and display an error indicating any tenders that failed to void.
+	36061, 52521
+Batch Adjustment notification not sending emails	Resolved an issue where iNovah did not send a notification email to the configured recipients when a batch was adjusted even when the "Batch Management: Batch adjusted" notification was enabled. iNovah now sends the email as expected.
+	18153
+Standard XML Import no longer calculates allocation amount by quantity and unit charge	Resolved an issue where when importing payments via an XML file in the standard iNovah format, iNovah would no longer calculate the allocation Amount for each allocation based on the corresponding Quantity and Unit Charge values in the scenario where the amount was not specified. iNovah will now once again calculate each allocation Amount if the Amount is not present in the import file.
+	23881
+Incorrect change calculated for overpayment when using Canadian penny rounding	Resolved an issue where iNovah did not calculate the correct amount of change due in an overpayment scenario where the cents portion of the amount paid is equal to the cents portion of the amount due, e.g. $10.12 paid on an amount due of $8.12. iNovah will now display the correct amount of change due, e.g. $2.00, instead of $2.02.
+	62982
+Canadian penny rounding can prevent pressing Enter to finish transaction	Resolved an issue where when Canadian Penny rounding is enabled, a Cashier user could not use the Enter key to finish a transaction in the scenario where the amount due is rounded down, e.g. $230.00 is paid for an amount due of $230.01. In this scenario, the drop-down and button for adding a tender were still enabled. The add button is now disabled since the transaction balance has been satisfied, and the user can press the Enter key to finish the transaction.
+	61227
+Exchange rate is calculated using the previous day's rate	Resolved an issue where iNovah use the previous day's exchange rate instead of using the current day's rate when balancing a batch created that same day. iNovah now uses the exchange rate for the current day as expected.
+	64722
+Intermittently unable to run reports due to extra backslash in report path	Resolved an issue where reports would intermittently fail to run because iNovah would sometimes add an extra backslash in the report path. iNovah now ensures the report path does not contain the extra backslash, and the reports run as expected.
+	63897
+Export scheduled for a future date runs on the day it was scheduled instead	Resolved an issue where when scheduling an export for a future date, the export ran on the day the schedule was added in iNovah instead of on the future date for which it was scheduled.  The export now runs on the future date as expected.	21835
+Cannot view System Properties page when Server Alias contains special characters	Resolved an issue where a user could enter special characters for the Server Alias on the System Properties page subsequently causing an error when trying to view the page.  The Server Alias no longer allows entering special characters.	27102
+Sorting payments by Payment Sequence on Adjust Transaction page fails with an error	Resolved an issue where sorting the list of payments on the Adjust Transaction page by Payment Sequence caused an error.  Sorting by Payment Sequence now works as expected.	32188
+Wrong year sometimes displayed when choosing "Select a month..." option	Resolved an issue where iNovah sometimes displayed the wrong year when selecting a month from the current year using the "Select a month..." option in the date drop-down available on multiple pages. This problem occurred after having previously selected a month from a different year while on another page. iNovah now displays the selected month for the current year as expected.
+	34263
+Find User does not search Description	Resolved an issue where Find User did not search the Description column on the Users page. Find User now searches the User Name and Description columns as expected.
+	35319
+Browse Payments does not apply payment type permissions to Payment Code drop-down	Resolved an issue where the Payment Code drop-down on the Browse Payments page listed payment types for which the user does not have permission. The drop-down now only shows the payment types assigned to the user.
+　
+Note: The Browse Payments results were already limited to payment types for which the user has permission.
+	38816
+Remote changes to user preferences lost on Cashier log off	Resolved an issue where iNovah Cashier would always save the user preferences when the user logs off of Cashier, regardless of whether they had changed. Any remote changes to the preferences made by an administrator were overwritten. Cashier will no longer overwrite remote changes to preferences unless those same preferences are modified locally prior to log off.
+	41305
+In Drawer link disappears from Balance Batch page after viewing Tender Pickups	Resolved an issue where clicking on the link to view the Tender Pickups while on the Balance Batch page caused the In Drawer link to disappear for tenders with an exchange rate, making it impossible calculate the correct amount.  The In Drawer link now remains visible as expected.
+	44380
+Allocation Totals report fails to print or save with a large number of allocation codes	Resolved an issue where the Allocation Totals report failed to print or save when running the report with a large number of allocation codes selected. The report now hides the long list of selected allocation codes by default and runs as expected.
+　
+It is still possible to see the list of selected allocation codes by clicking the + sign to expand the list.
+	16017, 44892
+Failed login attempts are not audited when using Windows authentication	Resolved an issue where failed login attempts were not audited when iNovah is configured to use Windows authentication.  All login attempts are now audited and logged as expected.
+	47883
+Auto-complete is allowed for Password field on Login page	Resolved an issue where the Login page allowed the web browser to auto-complete the Password field if the browser was configured to do so. Auto-complete is now disabled for the Password field, regardless of the browser settings.
+	48563
+Blank Document Number causes an error when creating an ACH file	Resolved an issue where an error occurred when creating an ACH file that included tenders for which no Document Number was specified. Document Number is not a required field when processing ACH transactions. The error no longer occurs when Document Number is omitted.
+	50770, 65448
+MICR characters are displayed incorrectly after entering On-Us symbol	Resolved an issue where iNovah Cashier displayed the special MICR symbols incorrectly after entering the On-Us symbol when manually entering a MICR. The MICR symbols now all display as expected.
+	51349
+Add to Bad Check List link enabled for non-check tenders	Resolved an issue where the "Add to Bad Check List" link on the Tender Details page was enabled for tenders with a Tender Type other than Check. Clicking the link for a non-check tender caused an error. The link is now only enabled for Check tenders as expected.
+	29085, 62141
+Clicking Add to Bad Check list for check without account number shows unfriendly error	Resolved an issue where clicking the "Add to Bad Check List" link on the Tender Details page for a check without an account number showed an unfriendly error message. Clicking the link now shows a friendly message if the account number is not present.
+	29086
+Possible to delete an office with associated batches	Resolved an issue where iNovah did not prevent a user with permission from deleting an office for which a batch had already been created. iNovah now displays a message indicating that it cannot delete the office because it has one or more associated batches. In the scenario where multiple offices are selected, iNovah will delete the selected offices that do not have batches and list those that do in the error message.
+	66218
+Deposit Number with static characters (literals) in format loaded incorrectly on Adjust Batch page	Resolved an issue where editing the deposit number for a batch deposit from the Adjust Batch page loaded the deposit number incorrectly if the number format included static characters (literals), e.g. "ABC-", as a prefix for the deposit number. Editing now works as expected regardless of the deposit number format.
+	66315
+EntryTimeStamp field in Cashier Tender View does not show time	Resolved an issue where the EntryTimeStamp field in Cashier Tender View only shows the date and not the time. The field now shows the time as expected.
+	63896
+Creating or editing a Consolidated Deposit fails when at least one batch deposit has no deposit number	Resolved issues where creating or editing a Consolidated Deposit failed with an error in the scenario where one or more of the included batch deposits did not have an associated deposit number. iNovah now saves the Consolidated Deposit without errors as expected, regardless of the deposit numbers.
+	64724, 65445
+Error occurs when date range returns no Consolidated Deposits after sorting Batch Deposits grid	Resolved an issue where an error occured on the Consolidated Deposits page when the selected date range did not return any Consolidated Deposits after having previously sorted the Batch Deposits grid. The page now displays the text indicating there are no consolidated deposits that match the criteria, as expected.
+	65487
+Sorting tenders by Tender Sequence on the Adjust Transaction page fails with an error	Resolved an issue where sorting the Tender Summary list by Tender Sequence on the Adjust Transaction page failed with an error. Sorting by Tender Sequence now works as expected.
+	64857
+Editing an invoice loads a nine-digit zip code incorrectly	Resolved an issue where the sixth digit of the zip code was removed when editing an invoice with a nine-digit zip code. Attempting to save the edits displayed a message indicating the zip code was invalid. Nine-digit zip codes now load correctly when editing an invoice.
+	64575
+Some permission descriptions do not match the UI	Resolved an issue where some of the permission descriptions did not match the corresponding UI elements.  The descriptions now match the page titles as expected.
+
+The affected permission descriptions were:
+
+ *  Administration - Message Broadcasts
+ *  Configuration - Custom Settings
+ *  Configuration - System Work Schedules
+ *  Remittance - Run currency counter
+
+	26810, 26811, 26812, 26814
+Typo in Broadcast Message prompt to select recipients	Resolved an issue where the message shown when no recipients are selected when attempting to broadcast a message contained a typo. The message read "At least on..." instead of "At least one..."
+	26841
+Missing configuration causes an unfriendly error when voiding an EMV Direct or Simplify transaction	Resolved an issue where iNovah displayed an unfriendly message when the ConvenienceFeeAuthMethod setting was missing from the System Configuration XML and the user tried to void a transaction processed using EMV Direct or Simplify. iNovah now displays just the friendly message indicating the setting is missing.
+	47183
+Printing an image from the web application does not work	Resolved an issue where printing an image from the iNovah application printed an essentially blank page with the standard browser header and footer. The image now prints as expected.	68869
+Criteria is misspelled on Step 2: Select Filter Criteria page when adding or editing query	Resolved an issue where the word criteria was misspelled on the Step 2: Select Filter Criteria page when adding or editing a query. The word is now spelled correctly in both flows.	68871, 68872
+Cannot edit existing filter criteria when adding query	Resolved an issue where when adding a new query, an error occurred when trying to edit an existing query criterion.  The user had to delete and re-add the criterion in order to modify it before saving the new query.  The problem did not occur when editing an existing query.  Editing the criterion now works as expected.	68814
+Cannot edit User Name for user without batches and with email address	Resolved an issue where when editing the User Name for a user without associated batches and with an email address, iNovah displays a message indicating the email address must be unique, even though there is no other user with the same email address. Saving the user record after editing the user name now works as expected when the user has an email address.
+
+NOTE: iNovah does not allow editing the user name for a user with associated batches.
+	68869
+Initializing PIN pad for EMV Direct from Cashier fails for First Data Edition	Resolved an issue where initializing a PIN pad for EMV Direct from Cashier failed with an error when the solution was configured for use with First Data. The feature was always requiring the EMV Kernel Version which is neither present nor required for some versions of the middleware application used to communicate with the credit card processor. The initialization process now works as expected.
+
+This issue only impacts clients using the EMV Direct solution with First Data for processing credit cards.
+	68793
