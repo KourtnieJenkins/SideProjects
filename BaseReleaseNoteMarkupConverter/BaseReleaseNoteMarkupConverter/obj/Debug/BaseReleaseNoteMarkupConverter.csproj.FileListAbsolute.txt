@@ -1,0 +1,5 @@
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter\bin\Debug\BaseReleaseNoteMarkupConverter.dll
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter\bin\Debug\BaseReleaseNoteMarkupConverter.pdb
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter\obj\Debug\BaseReleaseNoteMarkupConverter.csprojResolveAssemblyReference.cache
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter\obj\Debug\BaseReleaseNoteMarkupConverter.dll
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter\obj\Debug\BaseReleaseNoteMarkupConverter.pdb

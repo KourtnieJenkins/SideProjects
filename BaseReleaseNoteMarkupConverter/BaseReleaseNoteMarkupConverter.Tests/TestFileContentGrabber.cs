@@ -22,14 +22,20 @@ namespace BaseReleaseNoteMarkupConverter.Tests
         [SetUp]
         public void Setup()
         {
+            /*
             if (!File.Exists(filePath))
             {
                 testFile = File.CreateText(filePath);
-            }
+            }*/
+
+            testFile = File.CreateText(filePath);
 
             testFile.WriteLine(expectedFileContent);
 
             fileContentGrabber = new FileContentGrabber(filePath);
+
+            testFile.Close();
+            
 
         }
 

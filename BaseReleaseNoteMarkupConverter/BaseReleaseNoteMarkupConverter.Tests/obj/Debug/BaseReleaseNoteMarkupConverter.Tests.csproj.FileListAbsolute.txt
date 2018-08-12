@@ -1,0 +1,10 @@
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\BaseReleaseNoteMarkupConverter.Tests.dll
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\BaseReleaseNoteMarkupConverter.Tests.pdb
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\BaseReleaseNoteMarkupConverter.dll
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\nunit.framework.dll
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\BaseReleaseNoteMarkupConverter.pdb
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\nunit.framework.pdb
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\bin\Debug\nunit.framework.xml
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\obj\Debug\BaseReleaseNoteMarkupConverter.Tests.csprojResolveAssemblyReference.cache
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\obj\Debug\BaseReleaseNoteMarkupConverter.Tests.dll
+C:\Users\phena\Desktop\Kourt\Kourts_Git\SideProjects\BaseReleaseNoteMarkupConverter\BaseReleaseNoteMarkupConverter.Tests\obj\Debug\BaseReleaseNoteMarkupConverter.Tests.pdb
