@@ -1,0 +1,8 @@
+- open file & grab content -- ContentGrabber **maybe have this drop that first line of text if present**
+  ** maybe create a content provider that returns a string representation of a file content??***
+  **** maybe change name of contentGrabber to content provider?? ****
+
+- search through content, grab (first) header -- HeaderGrabber
+---- manipulate header & insert into new string?? or begin writing new file?
+- search through content, grab (first) body -- ContentGrabber
+---- manipulate content & insert/write to a file? 
